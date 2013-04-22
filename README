@@ -12,11 +12,12 @@ path issues; don't blame me -blame Java).
 
 If you've never used an R package in raw form before, the way to make them is as 
 follows: 
+
 git clone https://github.com/locklin/VMM.git
 R CMD build VMM
 R CMD install VMM_version.tar.gz
 
-From there, you should be able to load vmm with require(vmm) at your R command 
+From there, you should be able to load VMM with require(VMM) at your R command 
 line.
 
 ToDos:
