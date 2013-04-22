@@ -1,28 +1,34 @@
 This is an R package for Ron Begleiter's VMM Java code. 
 http://www.cs.technion.ac.il/~ronbeg/vmm/index.html
 
-It is basically undocumented, unless you already know about his code, or Variable order Markov
-Models in general. It is not fully tested, but it appears to work on toy problems.
-It is an online learning algorithm, so you can add more sequences to the trained objects
-as you receive them.
+It is basically undocumented, unless you already know about his code, or Variable 
+order Markov Models in general. It is not fully tested, but it appears to work on 
+toy problems.
+It is an online learning algorithm, so you can add more sequences to the trained 
+objects as you receive them.
 
-It requires you have rJava package installed and working with Java (there may be path issues). 
+It requires you have rJava package installed and working with Java (there may be 
+path issues; don't blame me -blame Java). 
 
-If you've never used an R package in raw form before, the way to make them is as follows:
+If you've never used an R package in raw form before, the way to make them is as 
+follows: 
 git clone https://github.com/locklin/VMM.git
 R CMD build VMM
 R CMD install vmm_version.tar.gz
 
-From there, you should be able to load vmm with require(vmm) at your R command line.
+From there, you should be able to load vmm with require(vmm) at your R command 
+line.
 
 ToDos:
-I don't know why it makes vmm lowercase
+I don't know why R CMD build makes vmm lowercase
 
-I may encapsulate these simple functions as an S3 class to make CRAN people happy, but
-it's useful as it is for now for experiments with online learning.
+I may encapsulate these simple functions as an S3 class to make CRAN people 
+or OO nerds happy, but it's useful as it is for now for experiments with 
+online learning.
 
-Other To-Dos: gizmos to turn floating point numbers into symbol strings, altering the
-Java methods to allow some introspection into the learned objects.
+Other To-Dos: gizmos to turn floating point numbers into symbol strings, 
+altering the Java methods to allow some introspection into the learned 
+objects.
 
 It could use a simple test data set as well.
 
