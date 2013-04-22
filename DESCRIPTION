@@ -1,0 +1,13 @@
+Package: vmm
+Version: 0.1
+Date: 2013-04-21
+Title: 
+Author: Scott Locklin
+Maintainer: Scott Locklin <scott@lugos.name>
+Description:  Compression sequence forcasting from Ron Begleiter's Java source
+Depends: R (>= 2.10.0), rJava (>= 0.5-0)
+SystemRequirements: Java (>= 1.5)
+License: GPL-3
+Packaged: 
+Repository: 
+Date/Publication: 

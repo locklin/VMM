@@ -1,0 +1,5 @@
+import("rJava")
+export("vmm.init")
+export("vmm.train")
+export("vmm.loglik")
+export("vmm.predict")
