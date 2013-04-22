@@ -14,13 +14,12 @@ If you've never used an R package in raw form before, the way to make them is as
 follows: 
 git clone https://github.com/locklin/VMM.git
 R CMD build VMM
-R CMD install vmm_version.tar.gz
+R CMD install VMM_version.tar.gz
 
 From there, you should be able to load vmm with require(vmm) at your R command 
 line.
 
 ToDos:
-I don't know why R CMD build makes vmm lowercase
 
 I may encapsulate these simple functions as an S3 class to make CRAN people 
 or OO nerds happy, but it's useful as it is for now for experiments with 
