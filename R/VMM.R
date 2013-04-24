@@ -15,9 +15,10 @@ java.charseq<-function(s) {
   return(out)
 }
 
-vmm.init<-function(kind="PPMC",size=256,d=5,m=10,s=10,
-                   pmin=10,alpha=0.6,r=0.7,gamma=0.5) {
+vmm.init<-function(kind="PPMC",size=5,d=5,m=2,s=8,
+                   pmin=0.006,alpha=0.0,r=1.05,gamma=0.0006) {
   ## can be LZms, PPMC, DCTW, BinaryCTW, LZ78, PST
+  ## size is size of alphabet, d is size of ...?
   paste("vmm.algs.",kind,"Predictor",sep="") -> method
   .jnew(method) -> obj
   if(kind=="LZms") {
@@ -32,7 +33,7 @@ vmm.init<-function(kind="PPMC",size=256,d=5,m=10,s=10,
     .jcall(obj,"V","init",as.integer(size),as.integer(d))
   } else if(kind=="PST") {
     .jcall(obj,"V","init",as.integer(size),as.double(pmin),as.double(alpha),
-           as.double(gamma),as.double(r),as.int(d))
+           as.double(gamma),as.double(r),as.integer(d))
   }
   return(obj)
 }

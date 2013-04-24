@@ -1,7 +1,7 @@
 Package: VMM
-Version: 0.1
+Version: 0.1.1
 Date: 2013-04-21
-Title: 
+Title: Compression based sequence forecasting from Ron Begleiter's Java code
 Author: Scott Locklin
 Maintainer: Scott Locklin <scott@lugos.name>
 Description:  Compression sequence forcasting from Ron Begleiter's Java source
