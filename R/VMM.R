@@ -1,9 +1,11 @@
 ## this is a simple set of tools for using Begleiter et. al.'s VMM code.
 ## http://www.cs.technion.ac.il/~ronbeg/vmm/index.html
 ## 
-## I may abstract these into an S3 class at some point, but as
-## long as the user knows the java native compression learning objects
-## are mutable, it should be fine for now.
+
+
+int2ascii<-function(x) {
+  rawToChar(as.raw(x))
+}
 
 ascii2int<-function(x) {
   strtoi(charToRaw(x),16L)
@@ -15,7 +17,7 @@ java.charseq<-function(s) {
   return(out)
 }
 
-vmm.init<-function(kind="PPMC",size=5,d=5,m=2,s=8,
+vmm.init<-function(kind="LZ78",size=128,d=5,m=2,s=8,
                    pmin=0.006,alpha=0.0,r=1.05,gamma=0.0006) {
   ## can be LZms, PPMC, DCTW, BinaryCTW, LZ78, PST
   ## size is size of alphabet, d is size of ...?

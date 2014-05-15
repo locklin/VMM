@@ -10,6 +10,11 @@
 \usage{
   vmm.train(obj,sequence) 
 }
+\arguments{
+  \item{obj}{VMM object created by vmm.init}
+  \item{sequence}
+  }
+
 \details{
   Details are presently unavailable, code taken from:
   http://www.cs.technion.ac.il/~ronbeg/vmm/index.html
